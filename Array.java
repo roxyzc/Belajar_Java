@@ -14,8 +14,10 @@ public class Array {
         // };
 
         String[][] members = {
-                { "roxyzc", "rozy" }
+                { "roxyzc", "rozy" },
+                { "manusia", "biasa" },
+                { "coba", "aja" }
         };
-        System.out.println(members[0][0]);
+        System.out.println(members[2][1]);
     }
 }
