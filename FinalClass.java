@@ -7,6 +7,7 @@ class Parent {
 }
 
 final class Child extends Parent {
+    // shadow attribute
     String nama;
 
     public void panggil() {
@@ -32,6 +33,7 @@ public class FinalClass {
         System.out.println(parent.nama);
 
         Parent parent1 = new Parent() {
+
             public void panggil() {
                 System.out.println("Panggil saya: " + this.nama);
             }

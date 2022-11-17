@@ -4,7 +4,8 @@ class Application {
     public static final int PROCESSOR;
     static {
         System.out.println("Mengakses class application");
-        PROCESSOR = Runtime.getRuntime().availableProcessors();
+        // PROCESSOR = Runtime.getRuntime().availableProcessors();
+        PROCESSOR = 16;
     }
 }
 
@@ -17,6 +18,14 @@ class MathUtil {
         int total = 0;
         for (var value : values) {
             total += value;
+        }
+        return total;
+    }
+
+    public static long kali(int... values) {
+        long total = 1;
+        for (var value : values) {
+            total *= value;
         }
         return total;
     }
@@ -50,7 +59,8 @@ public class StaticApp {
     public static void main(String[] args) {
         System.out.println(AGE);
         System.out.println(Constant.APPLICATION);
-        System.out.println(MathUtil.sum(1, 2, 4, 5, 6, 6));
+        System.out.println(MathUtil.sum(5, 10, 5, 20, 100));
+        System.out.println(MathUtil.kali(10, 20, 30, 40, 50));
         Country.City city = new Country.City();
         city.setNama("Jakarta");
         System.out.println(city.getNama());
